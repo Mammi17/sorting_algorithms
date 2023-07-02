@@ -1,12 +1,13 @@
 #include "sort.h"
 #include <stdio.h>
 /**
- * selection_sort - sorts an array of integers in ascending 
+ * selection_sort - sorts an array of integers in ascending
  * order using the Selection sort algorithm
  * @array: input array of integers
  * @size: size of the array
  * Return: void
  */
+
 void selection_sort(int *array, size_t size)
 {
 	int point;
@@ -23,7 +24,7 @@ void selection_sort(int *array, size_t size)
 		if (a != c)
 		{
 			point = array[a];
-			array[c] = array[c];
+			array[a] = array[c];
 			array[c] = point;
 			print_array(array, size);
 		}
