@@ -12,8 +12,7 @@ void selection_sort(int *array, size_t size)
 	int point;
 	size_t a, b, c;
 
-	a = 0;
-	while (a < size)
+	for (a = 0; a < size; a++)
 	{
 		c = a;
 		for (b = a + 1; b < size; b++)
@@ -28,6 +27,5 @@ void selection_sort(int *array, size_t size)
 			array[c] = point;
 			print_array(array, size);
 		}
-		a++;
 	}
 }
