@@ -9,7 +9,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	qsort(array, 0, size - 1, size);
+	_qsort(array, 0, size - 1, size);
 }
 /**
  * _qsort - auxiliar function for the
@@ -21,12 +21,12 @@ void quick_sort(int *array, size_t size)
  * Return: void
  */
 
-void qsort(int *array, int low, last, int size)
+void _qsort(int *array, int low, int last, int size)
 {
 	int b, c, a;
 	int point;
 
-	if (low < high)
+	if (low < last)
 	{
 		b = last;
 		c = low;
@@ -51,7 +51,7 @@ void qsort(int *array, int low, last, int size)
 			array[b] = point;
 			print_array(array, size);
 		}
-		qsort(array, low, c - 1, size);
-		qsort(array, c + 1, last, size);
+		_qsort(array, low, c - 1, size);
+		_qsort(array, c + 1, last, size);
 	}
 }
